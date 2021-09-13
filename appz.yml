@@ -1,7 +1,7 @@
 app:
   name: SonarQube
   code: SonarQube 
-  notify: appzdev@cloudbourne.co
+  notify: aborra@ecloudcontrol.com
     
 build:
   version: 8.2
