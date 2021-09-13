@@ -12,7 +12,6 @@ build:
     
 deploy:
   context: anushab7/DEV
-  type:  stateless
   replicas: 1
   port:
   - 9000     
