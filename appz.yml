@@ -5,13 +5,13 @@ app:
     
 build:
   version: 8.2
-  env: DEV
+  env: QA
   build_file: none
   output_files: output/*.zip
   image_template: sonarqube_azl-8.2
     
 deploy:
-  context: anushab7/DEV
+  context: anushab7/QA
   replicas: 1
   port:
   - 9000     
@@ -24,10 +24,10 @@ properties:
   SONAR_USER_USERNAME: sonaruser
   SONAR_USER_PASSWORD: 
     vault: SONAR_USER_PASSWORD
-  SONAR_JDBC_URL: jdbc:postgresql://postgres-sonarqube-14-1:5432/postgresonar
-  SONAR_JDBC_USERNAME: postgresonar
+  SONAR_JDBC_URL: jdbc:postgresql://postgres13-master-13-x:5432/springbootweb
+  SONAR_JDBC_USERNAME: springbootweb
   SONAR_JDBC_PASSWORD: 
     vault: SONAR_JDBC_PASSWORD
   CREATE_DEFAULT_USERS: TRUE
-  ENABLE_OIDC: TRUE
+  #ENABLE_OIDC: TRUE
   revision : 30
